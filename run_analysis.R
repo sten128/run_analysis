@@ -1,5 +1,7 @@
 library(dplyr)
 
+#read into data frames activity labels and names of variables and does some 
+#modification on names (remove upper case letters and substitute some special characters)
 activitylabels<-read.table("/home/sten/UCI HAR Dataset/activity_labels.txt")
 activitylabels$V2<-tolower(activitylabels$V2)
 activitylabels$V2<-gsub("_", ".", activitylabels$V2 )
