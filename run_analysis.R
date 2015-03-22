@@ -98,5 +98,5 @@ average<-arrange(average, subject.id, activity.name)
 
 
 #write a .txt file as required in part 1 of assignment
-write.table(average, "average_by_subject_and_activity", row.names=FALSE)
+write.table(average, "average_by_subject_and_activity.txt", row.names=FALSE)
 
