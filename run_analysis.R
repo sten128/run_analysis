@@ -85,15 +85,15 @@ merged<-rbind(xtrain, xtest)
 
 #create data sets with only the measurements on the mean and standard deviation
 #for each measurement, as required in step 2 of assignment
-index<-grep("mean|std", colnames(merged))
+index<-grep("mean|std|activity.name|subject.id", colnames(merged))
 mean.std.df<-merged[,index]
-mean.std.df<-merged[,index]
+
 
 
 #create data set called "average" with mean of all the variables and arranges 
 #it by subject id and activity name
 
-average<-aggregate(merged[,3:563], list(subject.id = merged$subject.id, activity.name = merged$activity.name), mean)
+average<-aggregate(mean.std.df[,3:88], list(subject.id = mean.std.df$subject.id, activity.name = mean.std.df$activity.name), mean)
 average<-arrange(average, subject.id, activity.name)
 
 
