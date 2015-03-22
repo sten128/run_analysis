@@ -1,12 +1,12 @@
 # run_analysis
 
 ### Data and purpose of script.
-The data used in this script can be found at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+The data used in this script can be found at https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip  
 Once the data are downloaded and unzipped in the working directory, the script does some tidying for further 
 analysis:
-1- It assigns descriptive variable names (and doing this it removes some special character to improve
+* It assigns descriptive variable names (and doing this it removes some special character to improve
    readability)
-2- Merges the data frames containing information about subject id and the name of the activity
+* Merges the data frames containing information about subject id and the name of the activity
    performed and the data frame containing all measuraments of the variables.
 
 In the raw data downloaded the measurements are divided into 2 data frames called "X_train.txt" and "X_test.txt".
