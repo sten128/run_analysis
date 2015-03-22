@@ -1,0 +1,17 @@
+Description of objects in run_analysis.R script
+
+"namesvar": contains names of variables in X_test.txt and X_train.txt
+
+"activitylabels": contains descriptive names of the activities 
+
+"xtrain" and "xtest": contain respectively the data sets in X_test.txt and X_train.txt
+
+"subjecttrain" and "subjecttest" : contains the id of the subjects performing each activity (each record) respectively in  X_test.txt and X_train.txt
+
+"merged" : contains the data sets X_test.txt and X_train.txt (already tidied up with the descriptive variable names etc) merged together
+
+"mean.std.df": is a data set created by subsetting "merged" data frame so that it contains only the measurements on the mean and standard deviation
+               for  each measurement.
+
+"average":  contains the average of each variable for each activity and each subject computed on the data set in "mean.std.df".   This data set is
+           arranged in ascending order by subject id and activity name
