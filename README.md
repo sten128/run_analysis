@@ -21,6 +21,6 @@ containing the average of each variable for each activity and each subject. This
 ascending order by subject id and activity name.
 
 NOTE:
--For further information about variable names INSIDE the data set and their meaning check the readme files contained in the original data.
--For more info about variables used in the script check the CodeBook file in this repo
+**For further information about variable names INSIDE the data set and their meaning check the readme files contained in the original data.
+**For more info about variables used in the script check the CodeBook file in this repo
 
