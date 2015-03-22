@@ -37,7 +37,6 @@ names(xtrain)<-namesvar
 xtrain<-cbind(ytrain, xtrain)
 xtrain<-cbind(subjecttrain, xtrain)
 
-#grep("mean|std", colnames(merged)) #per trovare le cose
 
 
 
@@ -47,7 +46,7 @@ for (i in 1:length(xtrain$activity.name)) {
         xtrain[ i,2]<-as.character(activitylabels$V2[value])} 
 
 
-#Tidying test data 
+#Now do the same for test data 
 
 xtest<-read.table("/home/sten/UCI HAR Dataset/test/X_test.txt")
 
@@ -76,8 +75,11 @@ for (i in 1:length(xtest$activity.name)) {
         value<- as.numeric(xtest[ i,2])
         xtest[ i,2]<-as.character(activitylabels$V2[value])} 
 
+
 #create merged data set from train and test data sets as required in step 1
 merged<-rbind(xtrain, xtest)
+
+
 
 #create data sets with only the measurements on the mean and standard deviation
 #for each measurement, as required in step 2 of assignment
@@ -86,7 +88,8 @@ mean.std.df<-merged[,index]
 mean.std.df<-merged[,index]
 
 
-#create data set with mean of all the variables
+#create data set called "average" with mean of all the variables and arranges 
+#it by subject id and activity name
 
 average<-aggregate(merged[,3:563], list(subject.id = merged$subject.id, activity.name = merged$activity.name), mean)
 average<-arrange(average, subject.id, activity.name)
